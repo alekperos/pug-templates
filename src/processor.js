@@ -58,11 +58,13 @@ function compileFile(filePath, callback) {
 		fs.readFile(filePath, 'UTF-8', (err, fileContent) => {
 			if(err)
 				return callback(err);
-			var compiledOutput = pug.compileClient(fileContent, {compileDebug: false});
 			let fileName = path.parse(filePath).name;
+			var compiledOutput = pug.compileClient(fileContent, {compileDebug: false, filename: filePath});
 			compiledOutput = compiledOutput.replace("function template(", ` ;PUG_TEMPLATES[\"${fileName}\"] = function (`);
 			return callback(null, compiledOutput);
 		});
+	} else {
+		return callback();
 	}
 }
 

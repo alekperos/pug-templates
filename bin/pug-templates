@@ -38,10 +38,10 @@ function processFiles(files) {
 	let defaultDir = cmd.dir || `${__dirname}/../`;
 
 	// process the file paths
-	files = files.map((file) => {return path.resolve(defaultDir, file)});
+	files = files.map((file) => {return path.join(defaultDir, file)});
 
 	// if output file path is not given via the parameter, then defaulting to given folder
-	let outputFile = cmd.out || path.resolve(defaultDir, "templates.js");
+	let outputFile = cmd.out || path.join(defaultDir, "templates.js");
 
 	processor(files, (err, outputStr) => {
 		if(err) return console.log(err);
