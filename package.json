@@ -1,0 +1,32 @@
+{
+  "name": "pug-templates",
+  "version": "1.0.0",
+  "description": "Command-line tool to generate templates from Pug files into a single JavaScript file for use in browsers",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alekperos/pug-templates.git"
+  },
+  "keywords": [
+    "pug",
+    "template",
+    "compile",
+    "browser",
+    "javascript",
+    "es6"
+  ],
+  "author": "Alakbar Ayyubov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alekperos/pug-templates/issues"
+  },
+  "homepage": "https://github.com/alekperos/pug-templates#readme",
+  "dependencies": {
+    "commander": "^2.14.0",
+    "pug": "^2.0.0-rc.4",
+    "uglify-js": "^3.3.9"
+  }
+}
