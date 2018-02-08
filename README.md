@@ -1,6 +1,6 @@
 # Pug-Templates
 
-This is a command-line tool to generate templates from Pug files into a single JavaScript file for use in browsers.
+This is a command-line tool to generate a single JavaScript file from Pug templates to use in browsers.
 
 ## Installation
 
