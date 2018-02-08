@@ -1,8 +1,10 @@
 {
   "name": "pug-templates",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Command-line tool to generate templates from Pug files into a single JavaScript file for use in browsers",
-  "bin": { "pug-templates": "./bin/pug-templates" },
+  "bin": {
+    "pug-templates": "./bin/pug-templates"
+  },
   "scripts": {
     "test": "mocha ./test"
   },
