@@ -2,11 +2,11 @@
 
 This is a command-line tool to generate templates from Pug files into a single JavaScript file for use in browsers.
 
-##Installation
+## Installation
 
 	npm install -g pug-templates
 
-##Usage Examples
+## Usage Examples
  
 	$ pug-templates [files...] [options]
   
@@ -25,3 +25,23 @@ This is a command-line tool to generate templates from Pug files into a single J
       # compile the content of the directory and output templates to destination file:
       $ pug-templates --dir ./examples/ --out ./outputs/templates.js
 
+After generating the `templates.js` you are ready to use it in your HTML files as:
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Example</title>
+      ...
+    </head>
+    <body>
+      <div></div>
+      <script type="text/javascript" src="/path/to/your/templates.js"></script>
+      <script type="text/javascript">
+        ...
+        var templateHtml = PUG_TEMPLATES["{template file name}"]( yourDataObject );
+        ...
+      </script>
+    </body>
+    </html>
+
+Thats it :)
